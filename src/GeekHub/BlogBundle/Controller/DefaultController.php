@@ -18,10 +18,18 @@ class DefaultController extends Controller
      * @param $name
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function oneParameterAction($name)
+    public function onePвarameterAction($name)
     {
-        return $this->render('GeekHubBlogBundle:Default:index.html.twig', [
+        return $this->render('GeekHubBlogBundle:Default:index1.html.twig', [
             'name' => $name,
+        ]);
+    }
+
+    public function twoParametersAction($firstName, $lastName)
+    {
+        return $this->render('GeekHubBlogBundle:Default:index2.html.twig', [
+            'firstName' => $firstName,
+            'lastName' => $lastName,
         ]);
     }
 }
