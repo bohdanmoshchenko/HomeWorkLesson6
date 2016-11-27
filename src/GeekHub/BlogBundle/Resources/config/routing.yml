@@ -1,3 +1,7 @@
 geek_hub_blog_homepage:
     path:     /
     defaults: { _controller: GeekHubBlogBundle:Default:index }
+
+geek_hub_blog_one_parameter:
+    path :    /one/{name}
+    defaults: {_controller: GeekHubBlogBundle:Default:index, name: User}
