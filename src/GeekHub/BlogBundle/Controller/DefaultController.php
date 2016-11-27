@@ -3,11 +3,12 @@
 namespace GeekHub\BlogBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
     /**
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
      */
     public function indexAction()
     {
@@ -16,18 +17,23 @@ class DefaultController extends Controller
 
     /**
      * @param $name
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
      */
-    public function onePвarameterAction($name)
+    public function oneParameterAction($name)
     {
-        return $this->render('GeekHubBlogBundle:Default:index1.html.twig', [
+        return $this->render('GeekHubBlogBundle:Default:oneParameter.html.twig', [
             'name' => $name,
         ]);
     }
 
+    /**
+     * @param $firstName
+     * @param $lastName
+     * @return Response
+     */
     public function twoParametersAction($firstName, $lastName)
     {
-        return $this->render('GeekHubBlogBundle:Default:index2.html.twig', [
+        return $this->render('GeekHubBlogBundle:Default:twoParameters.html.twig', [
             'firstName' => $firstName,
             'lastName' => $lastName,
         ]);

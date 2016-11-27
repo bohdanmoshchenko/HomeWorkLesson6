@@ -4,7 +4,7 @@ geek_hub_blog_homepage:
 
 geek_hub_blog_one_parameter:
     path :    /one/{name}
-    defaults: { _controller: GeekHubBlogBundle:Default:onePвarameter, name: User }
+    defaults: { _controller: GeekHubBlogBundle:Default:oneParameter, name: User }
 
 geek_hub_blog_two_parameters:
     path :    /two/{firstName}/{lastName}
